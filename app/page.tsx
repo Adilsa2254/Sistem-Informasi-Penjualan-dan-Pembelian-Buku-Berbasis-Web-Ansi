@@ -1,69 +1,202 @@
-import Image from "next/image";
+const books = [
+  {
+    title: "The Creative Act",
+    author: "Rick Rubin",
+    category: "Kreativitas",
+    condition: "Sangat baik",
+    type: "Dijual",
+    price: "Rp 145.000",
+    color: "sand",
+    size: "book-card--wide",
+    cover: "CREATIVE\nACT",
+  },
+  {
+    title: "Filosofi Teras",
+    author: "Henry Manampiring",
+    category: "Filosofi",
+    condition: "Bekas layak",
+    type: "Dijual",
+    price: "Rp 75.000",
+    color: "olive",
+    size: "",
+    cover: "FILOSOFI\nTERAS",
+  },
+  {
+    title: "The Midnight Library",
+    author: "Matt Haig",
+    category: "Fiksi",
+    condition: "Sangat baik",
+    type: "Ditukar",
+    price: "Tukar buku",
+    color: "peach",
+    size: "",
+    cover: "MIDNIGHT\nLIBRARY",
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    category: "Pengembangan diri",
+    condition: "Seperti baru",
+    type: "Dijual",
+    price: "Rp 110.000",
+    color: "blue",
+    size: "book-card--tall",
+    cover: "ATOMIC\nHABITS",
+  },
+];
+
+function ArrowIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 16 16" className="arrow-icon">
+      <path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" />
+    </svg>
+  );
+}
+
+function BookCard({
+  book,
+}: {
+  book: (typeof books)[number];
+}) {
+  return (
+    <article className={`book-card ${book.color} ${book.size}`}>
+      <div className="book-card__topline">
+        <span>{book.category}</span>
+        <span className="book-card__mark">↗</span>
+      </div>
+      <div className="book-cover" aria-label={`Sampul ${book.title}`}>
+        <span>{book.cover}</span>
+        <small>EDISI PILIHAN</small>
+      </div>
+      <div className="book-card__details">
+        <div>
+          <h3>{book.title}</h3>
+          <p>{book.author}</p>
+        </div>
+        <strong>{book.price}</strong>
+      </div>
+      <div className="book-card__footer">
+        <span className="chip">{book.condition}</span>
+        <span className="chip chip--dark">{book.type}</span>
+      </div>
+    </article>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main>
+      <nav className="site-nav" aria-label="Navigasi utama">
+        <a className="brand" href="#">
+          <span className="brand__symbol">B</span>
+          <span>Baca Ulang</span>
+        </a>
+        <div className="nav-links">
+          <a href="#katalog">Katalog</a>
+          <a href="#cerita">Tentang kami</a>
+          <a href="#cara-kerja">Cara kerja</a>
+        </div>
+        <a className="nav-action" href="#katalog">
+          Mulai menjelajah <ArrowIcon />
+        </a>
+      </nav>
+
+      <section className="hero section-shell">
+        <div className="eyebrow">
+          <span className="eyebrow__line" />
+          Ruang untuk cerita berikutnya
+        </div>
+        <div className="hero__content">
+          <h1>
+            Buku yang baik
+            <br />
+            <em>layak dibaca ulang.</em>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <div className="hero__aside">
+            <p>
+              Temukan, jual, dan tukarkan buku yang punya cerita. Sebuah ruang
+              kecil untuk memperpanjang umur setiap halaman.
+            </p>
+            <a className="button button--dark" href="#katalog">
+              Jelajahi katalog <ArrowIcon />
+            </a>
+          </div>
+        </div>
+        <div className="hero__bottom">
+          <span>01 / 04</span>
+          <span className="hero__rule" />
+          <span>Temukan bacaanmu</span>
+        </div>
+      </section>
+
+      <section className="intro section-shell" id="cerita">
+        <p className="section-kicker">Lebih dari sekadar transaksi</p>
+        <div className="intro__grid">
+          <h2>
+            Setiap buku punya
+            <br />
+            <span>kehidupan kedua.</span>
+          </h2>
+          <p>
+            Kami percaya buku tidak pernah benar-benar selesai saat halaman
+            terakhir ditutup. Di sini, buku berpindah tangan, menemukan ruang
+            baru, dan kembali menemani pembaca berikutnya.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+      </section>
+
+      <section className="catalog section-shell" id="katalog">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Pilihan minggu ini</p>
+            <h2>Temukan cerita baru.</h2>
+          </div>
+          <a className="text-link" href="#katalog">
+            Lihat semua buku <ArrowIcon />
           </a>
         </div>
-      </main>
-    </div>
+        <div className="bento-grid">
+          {books.map((book) => (
+            <BookCard key={book.title} book={book} />
+          ))}
+          <div className="catalog-note" id="cara-kerja">
+            <span className="catalog-note__number">04</span>
+            <p>
+              Punya buku yang ingin
+              <br />
+              <strong>melanjutkan perjalanan?</strong>
+            </p>
+            <a className="round-link" href="#katalog" aria-label="Jual buku">
+              <ArrowIcon />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="manifesto section-shell">
+        <span className="manifesto__quote">“</span>
+        <blockquote>
+          Buku adalah cara paling sunyi untuk
+          <br />
+          <em>bertemu banyak kehidupan.</em>
+        </blockquote>
+        <p>— Baca Ulang, sejak 2024</p>
+      </section>
+
+      <footer className="site-footer section-shell">
+        <div>
+          <a className="brand" href="#">
+            <span className="brand__symbol">B</span>
+            <span>Baca Ulang</span>
+          </a>
+          <p>Perpanjang umur cerita.</p>
+        </div>
+        <div className="footer-links">
+          <a href="#katalog">Instagram</a>
+          <a href="#katalog">Kebijakan privasi</a>
+          <span>© 2024 Baca Ulang</span>
+        </div>
+      </footer>
+    </main>
   );
 }
