@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title">
+  <title id="title">Ikigai</title>
+  <rect width="500" height="700" fill="#e5e0d3"/>
+  <circle cx="250" cy="302" r="126" fill="#e47f61"/>
+  <circle cx="250" cy="302" r="82" fill="none" stroke="#273d50" stroke-width="6"/>
+  <path d="M250 178v248M126 302h248" stroke="#273d50" stroke-width="3"/>
+  <path d="M250 302 318 234M250 302l-65 58" stroke="#f6f2e9" stroke-width="9" stroke-linecap="round"/>
+  <text x="44" y="82" fill="#273d50" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">GARCÍA &amp; MIRALLES</text>
+  <text x="44" y="555" fill="#273d50" font-family="Georgia,serif" font-size="88">IKIGAI</text>
+  <text x="44" y="652" fill="#273d50" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

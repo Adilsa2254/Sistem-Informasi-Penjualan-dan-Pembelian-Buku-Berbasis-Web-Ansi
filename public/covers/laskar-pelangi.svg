@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title">
+  <title id="title">Laskar Pelangi</title>
+  <rect width="500" height="700" fill="#2d5560"/>
+  <circle cx="390" cy="128" r="72" fill="#f3d37c"/>
+  <path d="M0 445 95 330l78 68 97-137 230 184v255H0Z" fill="#e47f61"/>
+  <path d="M0 530c100-35 160 26 255-19s154-43 245 15" fill="none" stroke="#f6f2e9" stroke-width="6"/>
+  <text x="44" y="80" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">ANDREA HIRATA</text>
+  <text x="44" y="270" fill="#f6f2e9" font-family="Georgia,serif" font-size="60">LASKAR</text>
+  <text x="44" y="335" fill="#f6f2e9" font-family="Georgia,serif" font-size="60">PELANGI</text>
+  <text x="44" y="652" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

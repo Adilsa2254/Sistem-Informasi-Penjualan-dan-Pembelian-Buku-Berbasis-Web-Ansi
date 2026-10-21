@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title desc">
+  <title id="title">Filosofi Teras</title>
+  <desc id="desc">An original calm olive book cover with classical columns and a sun.</desc>
+  <rect width="500" height="700" fill="#65705a"/>
+  <rect y="492" width="500" height="208" fill="#d8c89f"/>
+  <circle cx="92" cy="154" r="98" fill="none" stroke="#f6f2e9" stroke-opacity=".72" stroke-width="3"/>
+  <circle cx="92" cy="154" r="70" fill="none" stroke="#f6f2e9" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M310 492V280h-31l51-64 51 64h-31v212M391 492V321h-26l43-53 43 53h-26v171" fill="none" stroke="#4e5948" stroke-width="14"/>
+  <path d="M255 492h235" stroke="#4e5948" stroke-width="8"/>
+  <text x="48" y="82" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">HENRY MANAMPIRING</text>
+  <text x="48" y="315" fill="#f6f2e9" font-family="Georgia,serif" font-size="68">FILOSOFI</text>
+  <text x="48" y="385" fill="#f6f2e9" font-family="Georgia,serif" font-size="68">TERAS</text>
+  <text x="48" y="652" fill="#4e5948" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

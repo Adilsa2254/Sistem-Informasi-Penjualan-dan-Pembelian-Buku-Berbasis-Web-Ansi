@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title">
+  <title id="title">Negeri 5 Menara</title>
+  <rect width="500" height="700" fill="#63705f"/>
+  <rect y="500" width="500" height="200" fill="#d8c89f"/>
+  <path d="M125 500V290l125-105 125 105v210M180 500V330h140v170M250 185v-54" fill="none" stroke="#3e5147" stroke-width="14"/>
+  <circle cx="250" cy="106" r="29" fill="#e8b16b"/>
+  <text x="44" y="78" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">AHMAD FUADI</text>
+  <text x="44" y="270" fill="#f6f2e9" font-family="Georgia,serif" font-size="56">NEGERI 5</text>
+  <text x="44" y="330" fill="#f6f2e9" font-family="Georgia,serif" font-size="56">MENARA</text>
+  <text x="44" y="652" fill="#3e5147" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

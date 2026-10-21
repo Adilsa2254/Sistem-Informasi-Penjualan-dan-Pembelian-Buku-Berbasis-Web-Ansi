@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title desc">
+  <title id="title">The Creative Act</title>
+  <desc id="desc">An original abstract book cover with a sun and a winding creative line.</desc>
+  <rect width="500" height="700" fill="#20383a"/>
+  <circle cx="388" cy="174" r="116" fill="#e8b16b"/>
+  <circle cx="388" cy="174" r="78" fill="#f2c983" opacity=".65"/>
+  <path d="M0 570C95 500 132 590 219 518s102-122 281-54v236H0Z" fill="#162a2d"/>
+  <path d="M50 110h400v480H50z" fill="none" stroke="#f6f2e9" stroke-opacity=".75" stroke-width="3"/>
+  <path d="M92 494c52-93 104-87 140-18 30 58 71 49 106-31 23-51 55-78 103-68" fill="none" stroke="#e8b16b" stroke-width="7" stroke-linecap="round"/>
+  <text x="78" y="94" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="17" letter-spacing="4">RICK RUBIN</text>
+  <text x="78" y="315" fill="#f6f2e9" font-family="Georgia,serif" font-size="63">THE</text>
+  <text x="78" y="382" fill="#f6f2e9" font-family="Georgia,serif" font-size="63">CREATIVE</text>
+  <text x="78" y="449" fill="#f6f2e9" font-family="Georgia,serif" font-size="63">ACT</text>
+  <text x="78" y="652" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

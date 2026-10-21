@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title">
+  <title id="title">Perempuan Berkalung Sorban</title>
+  <rect width="500" height="700" fill="#536457"/>
+  <path d="M0 480c95-95 177-91 250 0s155 94 250 0v220H0Z" fill="#d8c89f"/>
+  <circle cx="250" cy="275" r="108" fill="none" stroke="#e8b16b" stroke-width="18"/>
+  <path d="M191 275h118M250 216v118" stroke="#e8b16b" stroke-width="5"/>
+  <text x="44" y="78" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">ABIDAH EL KHALIEQY</text>
+  <text x="44" y="205" fill="#f6f2e9" font-family="Georgia,serif" font-size="48">PEREMPUAN</text>
+  <text x="44" y="260" fill="#f6f2e9" font-family="Georgia,serif" font-size="48">BERKALUNG</text>
+  <text x="44" y="315" fill="#f6f2e9" font-family="Georgia,serif" font-size="48">SORBAN</text>
+  <text x="44" y="652" fill="#536457" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

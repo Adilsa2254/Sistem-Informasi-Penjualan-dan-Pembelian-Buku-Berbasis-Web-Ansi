@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title">
+  <title id="title">Laut Bercerita</title>
+  <rect width="500" height="700" fill="#263957"/>
+  <circle cx="370" cy="170" r="72" fill="#e8b16b"/>
+  <path d="M0 390c80-60 145 35 226-18s151-70 274 10v318H0Z" fill="#17263f"/>
+  <path d="M0 480c90-50 146 46 241-8s154-65 259 8M0 545c98-45 150 34 250-11s151-52 250 10" fill="none" stroke="#e8b16b" stroke-opacity=".75" stroke-width="5"/>
+  <text x="44" y="82" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">LEILA S. CHUDORI</text>
+  <text x="44" y="270" fill="#f6f2e9" font-family="Georgia,serif" font-size="64">LAUT</text>
+  <text x="44" y="340" fill="#f6f2e9" font-family="Georgia,serif" font-size="64">BERCERITA</text>
+  <text x="44" y="652" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

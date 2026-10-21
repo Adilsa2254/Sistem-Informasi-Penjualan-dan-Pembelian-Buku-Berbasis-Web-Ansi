@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title">
+  <title id="title">Sapiens</title>
+  <rect width="500" height="700" fill="#3c4c43"/>
+  <circle cx="250" cy="285" r="124" fill="#e8b16b"/>
+  <path d="M250 112v348M77 285h346M128 163l244 244M372 163 128 407" stroke="#f6f2e9" stroke-opacity=".55" stroke-width="3"/>
+  <circle cx="250" cy="285" r="24" fill="#3c4c43"/>
+  <text x="44" y="82" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">YUVAL NOAH HARARI</text>
+  <text x="44" y="560" fill="#f6f2e9" font-family="Georgia,serif" font-size="78">SAPIENS</text>
+  <text x="44" y="652" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

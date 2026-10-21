@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title desc">
+  <title id="title">Atomic Habits</title>
+  <desc id="desc">An original geometric cream and coral book cover with a growing pattern.</desc>
+  <rect width="500" height="700" fill="#e4e1d7"/>
+  <circle cx="82" cy="260" r="147" fill="#e47f61"/>
+  <path d="M0 530h500v170H0z" fill="#273d50"/>
+  <g fill="none" stroke="#e4e1d7" stroke-width="4" opacity=".92">
+    <path d="M278 675V510M328 675V486M378 675V462M428 675V438M478 675V414"/>
+    <path d="M252 566h252M252 614h252M252 662h252"/>
+  </g>
+  <path d="M260 390c48-54 94-54 140 0s91 54 140 0" fill="none" stroke="#273d50" stroke-width="8"/>
+  <text x="48" y="84" fill="#273d50" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">JAMES CLEAR</text>
+  <text x="48" y="255" fill="#273d50" font-family="Georgia,serif" font-size="68">ATOMIC</text>
+  <text x="48" y="327" fill="#273d50" font-family="Georgia,serif" font-size="68">HABITS</text>
+  <text x="48" y="652" fill="#e4e1d7" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>

@@ -1,3 +1,8 @@
+"use client";
+
+import Image from "next/image";
+import { useMemo, useState } from "react";
+
 const books = [
   {
     title: "The Creative Act",
@@ -8,7 +13,8 @@ const books = [
     price: "Rp 145.000",
     color: "sand",
     size: "book-card--wide",
-    cover: "CREATIVE\nACT",
+    coverImage: "/covers/the-creative-act.svg",
+    coverStyle: "creative",
   },
   {
     title: "Filosofi Teras",
@@ -19,7 +25,8 @@ const books = [
     price: "Rp 75.000",
     color: "olive",
     size: "",
-    cover: "FILOSOFI\nTERAS",
+    coverImage: "/covers/filosofi-teras.svg",
+    coverStyle: "philosophy",
   },
   {
     title: "The Midnight Library",
@@ -30,7 +37,8 @@ const books = [
     price: "Tukar buku",
     color: "peach",
     size: "",
-    cover: "MIDNIGHT\nLIBRARY",
+    coverImage: "/covers/the-midnight-library.svg",
+    coverStyle: "midnight",
   },
   {
     title: "Atomic Habits",
@@ -41,7 +49,80 @@ const books = [
     price: "Rp 110.000",
     color: "blue",
     size: "book-card--tall",
-    cover: "ATOMIC\nHABITS",
+    coverImage: "/covers/atomic-habits.svg",
+    coverStyle: "atomic",
+  },
+  {
+    title: "Laut Bercerita",
+    author: "Leila S. Chudori",
+    category: "Fiksi",
+    condition: "Sangat baik",
+    type: "Dijual",
+    price: "Rp 95.000",
+    color: "peach",
+    size: "",
+    coverImage: "/covers/laut-bercerita.svg",
+    coverStyle: "midnight",
+  },
+  {
+    title: "Sapiens",
+    author: "Yuval Noah Harari",
+    category: "Sejarah",
+    condition: "Seperti baru",
+    type: "Dijual",
+    price: "Rp 125.000",
+    color: "sand",
+    size: "",
+    coverImage: "/covers/sapiens.svg",
+    coverStyle: "creative",
+  },
+  {
+    title: "Negeri 5 Menara",
+    author: "Ahmad Fuadi",
+    category: "Inspirasi",
+    condition: "Bekas layak",
+    type: "Ditukar",
+    price: "Tukar buku",
+    color: "olive",
+    size: "",
+    coverImage: "/covers/negeri-5-menara.svg",
+    coverStyle: "philosophy",
+  },
+  {
+    title: "Ikigai",
+    author: "Héctor García & Francesc Miralles",
+    category: "Pengembangan diri",
+    condition: "Sangat baik",
+    type: "Dijual",
+    price: "Rp 85.000",
+    color: "blue",
+    size: "",
+    coverImage: "/covers/ikigai.svg",
+    coverStyle: "atomic",
+  },
+  {
+    title: "Laskar Pelangi",
+    author: "Andrea Hirata",
+    category: "Fiksi",
+    condition: "Bekas layak",
+    type: "Dijual",
+    price: "Rp 70.000",
+    color: "sand",
+    size: "",
+    coverImage: "/covers/laskar-pelangi.svg",
+    coverStyle: "creative",
+  },
+  {
+    title: "Perempuan Berkalung Sorban",
+    author: "Abidah El Khalieqy",
+    category: "Sastra",
+    condition: "Sangat baik",
+    type: "Dijual",
+    price: "Rp 80.000",
+    color: "olive",
+    size: "",
+    coverImage: "/covers/perempuan-berkalung-sorban.svg",
+    coverStyle: "philosophy",
   },
 ];
 
@@ -64,9 +145,15 @@ function BookCard({
         <span>{book.category}</span>
         <span className="book-card__mark">↗</span>
       </div>
-      <div className="book-cover" aria-label={`Sampul ${book.title}`}>
-        <span>{book.cover}</span>
-        <small>EDISI PILIHAN</small>
+      <div
+        className={`book-cover book-cover--${book.coverStyle}`}
+      >
+        <Image
+          src={book.coverImage}
+          alt={`Sampul buku ${book.title}`}
+          fill
+          sizes="(max-width: 700px) 42vw, 215px"
+        />
       </div>
       <div className="book-card__details">
         <div>
@@ -80,6 +167,90 @@ function BookCard({
         <span className="chip chip--dark">{book.type}</span>
       </div>
     </article>
+  );
+}
+
+function Catalog() {
+  const [activeCategory, setActiveCategory] = useState("Semua");
+  const [search, setSearch] = useState("");
+
+  const categories = ["Semua", ...new Set(books.map((book) => book.category))];
+  const filteredBooks = useMemo(() => {
+    const keyword = search.trim().toLowerCase();
+
+    return books.filter((book) => {
+      const matchesCategory =
+        activeCategory === "Semua" || book.category === activeCategory;
+      const matchesSearch =
+        !keyword ||
+        book.title.toLowerCase().includes(keyword) ||
+        book.author.toLowerCase().includes(keyword);
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [activeCategory, search]);
+
+  return (
+    <section className="catalog section-shell" id="katalog">
+      <div className="section-heading">
+        <div>
+          <p className="section-kicker">Koleksi Baca Ulang</p>
+          <h2>Temukan cerita baru.</h2>
+        </div>
+        <p className="catalog-count">
+          {filteredBooks.length} dari {books.length} buku
+        </p>
+      </div>
+      <div className="catalog-toolbar">
+        <div className="catalog-filters" aria-label="Filter kategori buku">
+          {categories.map((category) => (
+            <button
+              className={`catalog-filter ${
+                activeCategory === category ? "is-active" : ""
+              }`}
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              type="button"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <label className="catalog-search">
+          <span className="sr-only">Cari judul atau penulis</span>
+          <input
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder="Cari judul atau penulis..."
+            type="search"
+            value={search}
+          />
+          <span aria-hidden="true">⌕</span>
+        </label>
+      </div>
+      {filteredBooks.length > 0 ? (
+        <div className="bento-grid">
+          {filteredBooks.map((book) => (
+            <BookCard key={book.title} book={book} />
+          ))}
+          <div className="catalog-note" id="cara-kerja">
+            <span className="catalog-note__number">04</span>
+            <p>
+              Punya buku yang ingin
+              <br />
+              <strong>melanjutkan perjalanan?</strong>
+            </p>
+            <a className="round-link" href="#katalog" aria-label="Jual buku">
+              <ArrowIcon />
+            </a>
+          </div>
+        </div>
+      ) : (
+        <div className="catalog-empty">
+          <strong>Buku tidak ditemukan.</strong>
+          <p>Coba gunakan kata kunci atau kategori yang berbeda.</p>
+        </div>
+      )}
+    </section>
   );
 }
 
@@ -145,33 +316,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="catalog section-shell" id="katalog">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Pilihan minggu ini</p>
-            <h2>Temukan cerita baru.</h2>
-          </div>
-          <a className="text-link" href="#katalog">
-            Lihat semua buku <ArrowIcon />
-          </a>
-        </div>
-        <div className="bento-grid">
-          {books.map((book) => (
-            <BookCard key={book.title} book={book} />
-          ))}
-          <div className="catalog-note" id="cara-kerja">
-            <span className="catalog-note__number">04</span>
-            <p>
-              Punya buku yang ingin
-              <br />
-              <strong>melanjutkan perjalanan?</strong>
-            </p>
-            <a className="round-link" href="#katalog" aria-label="Jual buku">
-              <ArrowIcon />
-            </a>
-          </div>
-        </div>
-      </section>
+      <Catalog />
 
       <section className="manifesto section-shell">
         <span className="manifesto__quote">“</span>

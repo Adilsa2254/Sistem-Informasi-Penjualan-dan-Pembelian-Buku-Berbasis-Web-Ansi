@@ -15,3 +15,22 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+
+
+## DataBase
+
+1. Pelanggan:
+    * ID Pelanggan
+    * Nama
+    * Gender
+    * Email
+    * No_Hp
+
+2. Pembelian:
+    * Id_pembelian
+    * No_pembelian
+    * tgl_pembelia
+
+3. Buku
+    * ID_buku
+    * 

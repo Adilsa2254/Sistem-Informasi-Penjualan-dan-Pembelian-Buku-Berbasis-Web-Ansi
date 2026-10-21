@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-labelledby="title desc">
+  <title id="title">The Midnight Library</title>
+  <desc id="desc">An original midnight blue book cover with stars, a moon, and a library doorway.</desc>
+  <rect width="500" height="700" fill="#302c4b"/>
+  <circle cx="392" cy="140" r="67" fill="#f1c871"/>
+  <circle cx="420" cy="115" r="67" fill="#302c4b"/>
+  <g fill="#f3d37c">
+    <circle cx="76" cy="137" r="4"/><circle cx="188" cy="91" r="3"/><circle cx="302" cy="204" r="4"/>
+    <circle cx="430" cy="284" r="3"/><circle cx="102" cy="342" r="3"/><circle cx="376" cy="410" r="4"/>
+  </g>
+  <path d="M92 586V425l158-102 158 102v161" fill="#211e38" stroke="#f6f2e9" stroke-opacity=".6" stroke-width="3"/>
+  <path d="M205 586V460h90v126" fill="#f1c871"/>
+  <path d="M250 460v126" stroke="#302c4b" stroke-width="5"/>
+  <path d="M92 586h316" stroke="#f1c871" stroke-width="7"/>
+  <text x="42" y="75" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">MATT HAIG</text>
+  <text x="42" y="270" fill="#f6f2e9" font-family="Georgia,serif" font-size="61">THE</text>
+  <text x="42" y="335" fill="#f6f2e9" font-family="Georgia,serif" font-size="61">MIDNIGHT</text>
+  <text x="42" y="400" fill="#f6f2e9" font-family="Georgia,serif" font-size="61">LIBRARY</text>
+  <text x="42" y="652" fill="#f6f2e9" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">EDISI PILIHAN</text>
+</svg>
