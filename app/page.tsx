@@ -267,9 +267,14 @@ export default function Home() {
           <a href="#cerita">Tentang kami</a>
           <a href="#cara-kerja">Cara kerja</a>
         </div>
-        <a className="nav-action" href="#katalog">
-          Mulai menjelajah <ArrowIcon />
-        </a>
+        <div className="nav-actions">
+          <a className="nav-login" href="/login">
+            Login
+          </a>
+          <a className="nav-action" href="#katalog">
+            Mulai menjelajah <ArrowIcon />
+          </a>
+        </div>
       </nav>
 
       <section className="hero section-shell">
